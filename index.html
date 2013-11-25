@@ -16,8 +16,12 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">				
 		<link rel="stylesheet" href="css/topcoat/topcoat-mobile-light.css">				
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">		
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">	
 
+		<script src="js/jquery.js"></script>	
+		<script src="js/angular.js"></script>
+
+		
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -45,91 +49,100 @@
 					</p>
 				</section>
 
-				<section>
-					<h5>Tool we will use</h5>
-					<h3>Monaca</h3>		
-					<ul>
-						<li>IDE on the cloud</li>
-						<li>for PhoneGap App</li>
-					</ul>
-				</section>
-
-				<section>
-					<section>
-						<h2>#0</h2>
-						<h3>Getting Ready</h3>		
-					</section>
-
-					<section>
-						<h2>Get a free account</h2>
-						<h5><a href="https://monaca.mobi">https://monaca.mobi</a></h5>
-					</section>
-					
-					<section>
-						<h2>Install Monaca Debugger</h2>
-						<img src="img/debugger.png" alt="">
-					</section>
-				</section>
-
-				<section>
-					<h2>Now we are set!</h2>
-				</section>
 
 				<section>
 					<h2>Cordova/PhoneGap</h2>
 					<img src="img/cordova_bot.png" alt="">
 				</section>
 
-				<section>
-					<section>
-						<h2>Topcoat</h2>
-						<a href="http://topcoat.io/topcoat/topcoat-mobile-light.html" title="">
-							<img src="img/topcoat.png" alt="">
-						</a>		
-					</section>
-					
-					<section>
-						
-						<button class="topcoat-button">Button</button>
-						<pre>
-							<code>
-<button class="topcoat-button">Button</button>
-							</code>
-						</pre>						
-					</section>
-
-					<section>
-						
-						<h2>Navigation Bar</h2>
-						<p>
-							<iframe width="100%" height="81px" src="topcoat/navigation/index.html"></iframe>
-						</p>
-						<pre>
-							<code>
-<div class="topcoat-navigation-bar">
-    <div class="topcoat-navigation-bar__item center full">
-        <h1 class="topcoat-navigation-bar__title">Header</h1>
-    </div>
-</div>
-							</code>
-						</pre>						
-
-					</section>
-				</section>
 
 				<section>
 					<section>
 						<h2>AngularJS</h2>
 						<img src="img/angularjs.jpeg" alt="">	
+						<p>teaches your browsers new tricks by extending HTML vocabulary</p>
 					</section>
 
 					<section>
-						<h2>Directives</h2>
+						<h2>Some features of AngularJS</h2>
+					</section>
+
+					<section>
+						<h2>Data Binding</h2>
+						<pre>
+							<code data-trim>
+<input type="text" ng-model="name">
+<div>
+	Hello {{name}}
+</div>
+							</code>
+						</pre>
 						<p>
-							let you create custom element.
+<div id="app1">
+	<input type="text" ng-model="name">
+	<div>
+		Hello {{name}}
+	</div>
+</div>
 						</p>
-						<P>
-							<pre>
+					</section>
+
+					<section>
+						<h3>Controller</h3>
+						<strong>js</strong>
+						<pre>
+							<code data-trim>
+function Controller1( $scope ){
+	$scope.name = "1";
+}
+
+function Controller2( $scope ){
+	$scope.name = "2";
+}
+							</code>
+						</pre>
+
+							<strong>html</strong>
+						<pre>
+							<code data-trim>
+<div ng-controller="Controller1">
+	<h2>{{name}}</h2>
+</div>
+
+<div ng-controller="Controller2">
+	<h2>{{name}}</h2>
+</div>
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h2>Form Validation</h2>
+						<pre>
+							<code data-trim>
+<form name="myForm">
+	<input type="text" name="name" required>
+	<span ng-show="myForm.name.$error.required">Name is required</span>
+</form>
+							</code>
+						</pre>
+						<p>
+<div id="app2">							
+<form name="myForm">
+	<input type="text" name="name" ng-model="hi" required>
+	<span ng-show="myForm.name.$error.required">Name is required</span>
+</form>
+</div>
+						</p>
+					</section>
+
+				</section>
+
+				<!-- <section> -->
+					
+					<!-- <section>
+						<h2>You can create your own tag</h2>
+						<pre>
 <code><my-awesome-tag></my-awesome-tag>
 								</code>
 							</pre>
@@ -142,13 +155,62 @@
 								<code>
 <fb-login-button app-id="xxxxxxx"></fb-login-button>
 								</code>
-							</pre>
-						</P>
+						</pre>
+					</section>	 -->				
+					
+				<!-- </section> -->
+
+
+				<section>
+					<section>
+						<h2>Topcoat</h2>
+						<a href="http://topcoat.io/topcoat/topcoat-mobile-light.html" title="">
+							<img src="img/topcoat.png" alt="">
+						</a>		
 					</section>
+
+					<section>
+						<h2>Goal</h2>
+						<p>
+							<ul>
+								<li>Mobile First</li>
+								<li>Performance matters</li>
+							</ul>
+						</p>
+							
+					</section>
+					
+					<section>
+						<a href="http://topcoat.io/topcoat/topcoat-mobile-light.html" title="">
+							Components
+						</a>							
+					</section>
+					
 					
 				</section>
 
 				<section>
+					<h2>Now workshop time!</h2>					
+				</section>
+
+				<section>
+					<h2>What we will create</h2>
+					<p>A Todo App</p>
+				</section>
+
+				<section>
+					<h2>Tool we will use</h2>
+					<p>Monaca</p>
+				</section>
+
+				<section>
+					<h2>Let's start with this Template</h2>
+					<p>https://</p>
+				</section>
+
+				
+
+				<!-- <section>
 					<section>
 						<h2>Topcoat + Directives</h2>	
 					</section>
@@ -188,9 +250,9 @@
 						</pre>
 					</section>					
 					
-				</section>
+				</section> -->
 
-				<section>
+				<!-- <section>
 					<section>
 						<h3>Is it enough?</h3>
 						<ul>
@@ -221,41 +283,11 @@
 					<section>
 						<h2>Page management</h2>
 					</section>
-				</section>
-
-
-				<section>
-					<h2>Onsen UI</h2>
-					<a href="http://docs.monaca.mobi/onsen/en/" title="">
-						<img src="img/onsenui.png" alt="">
-					</a>					
-					<p>AngularJS + Topcoat + Mobile</p>
-				</section>
+				</section> -->
 
 				<section>
-					<h2>+ Mobile</h2>
-					<ul>
-						<li>fastclick</li>
-						<li>-webkit-tap-highlight-color: rgba(0,0,0,0);</li>
-						<li>-webkit-user-select: none;</li>
-						<li>-webkit-overflow-scrolling: touch;
-							<ul>
-								<li>iScroll for old Android browser</li>
-							</ul>
-						</li>
-						<li><a href="http://docs.monaca.mobi/onsen/docs/en/#navigator" target="_blank" title="">Page management</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Let's get hand on!</h2>					
-				</section>
-
-				<section>
-					<h2>with this Template</h2>	
-					https://github.com/kruyvanna/onsen_template
-				</section>
-
+					<h2>Wrapup</h2>
+				</section>				
 				
 
 				<section>
@@ -294,6 +326,8 @@
 			});
 
 		</script>
+
+		<script src="js/app.js"></script>
 
 	</body>
 </html>
