@@ -51,8 +51,18 @@
 
 
 				<section>
-					<h2>Cordova/PhoneGap</h2>
-					<img src="img/cordova_bot.png" alt="">
+					<section>
+						<h2>Cordova/PhoneGap</h2>
+						<img src="img/cordova_bot.png" alt="">	
+					</section>
+					
+					<section>
+						<h2>Cordova/PhoneGap</h2>
+						<ul>
+							<li>Bringing native features to the JS world</li>
+							<li>Cross platform (recently: +Chrome App)</li>
+						</ul>
+					</section>
 				</section>
 
 
@@ -60,11 +70,16 @@
 					<section>
 						<h2>AngularJS</h2>
 						<img src="img/angularjs.jpeg" alt="">	
-						<p>teaches your browsers new tricks by extending HTML vocabulary</p>
+						<p>HTML enhanced for App</p>
 					</section>
 
 					<section>
-						<h2>Some features of AngularJS</h2>
+						<h2>Trends</h2>
+						<img src="img/trend.png" alt="">
+					</section>
+
+					<section>
+						<h2>Some features of AngularJS in action</h2>
 					</section>
 
 					<section>
@@ -89,7 +104,7 @@
 
 					<section>
 						<h3>Controller</h3>
-						<strong>js</strong>
+						<!-- <strong>js</strong> -->
 						<pre>
 							<code data-trim>
 function Controller1( $scope ){
@@ -102,15 +117,15 @@ function Controller2( $scope ){
 							</code>
 						</pre>
 
-							<strong>html</strong>
+							<!-- <strong>html</strong> -->
 						<pre>
 							<code data-trim>
 <div ng-controller="Controller1">
-	<h2>{{name}}</h2>
+	<h2>{{name}}</h2> // "1"
 </div>
 
 <div ng-controller="Controller2">
-	<h2>{{name}}</h2>
+	<h2>{{name}}</h2> // "2"
 </div>
 							</code>
 						</pre>
@@ -121,7 +136,7 @@ function Controller2( $scope ){
 						<pre>
 							<code data-trim>
 <form name="myForm">
-	<input type="text" name="name" required>
+	<input type="text" name="name" required="required">
 	<span ng-show="myForm.name.$error.required">Name is required</span>
 </form>
 							</code>
@@ -130,10 +145,20 @@ function Controller2( $scope ){
 <div id="app2">							
 <form name="myForm">
 	<input type="text" name="name" ng-model="hi" required>
-	<span ng-show="myForm.name.$error.required">Name is required</span>
+	<span style="color: red;" ng-show="myForm.name.$error.required">Name is required</span>
 </form>
 </div>
 						</p>
+					</section>
+
+					<section>
+						<h2>Other features</h2>
+						<ul>
+							<li>Directives</li>
+							<li>Filters</li>
+							<li>Dependency Injection</li>
+							<li>Localization</li>
+						</ul>
 					</section>
 
 				</section>
@@ -164,7 +189,7 @@ function Controller2( $scope ){
 				<section>
 					<section>
 						<h2>Topcoat</h2>
-						<a href="http://topcoat.io/topcoat/topcoat-mobile-light.html" title="">
+						<a href="http://topcoat.io/topcoat/topcoat-mobile-light.html" target="_blank">
 							<img src="img/topcoat.png" alt="">
 						</a>		
 					</section>
@@ -175,6 +200,7 @@ function Controller2( $scope ){
 							<ul>
 								<li>Mobile First</li>
 								<li>Performance matters</li>
+								<li>0% JS</li>
 							</ul>
 						</p>
 							
@@ -194,18 +220,20 @@ function Controller2( $scope ){
 				</section>
 
 				<section>
-					<h2>What we will create</h2>
+					<h4>What we will create</h4>
 					<p>A Todo App</p>
+					<iframe width="350" height="600" src="http://kruyvanna.github.io/Blog_Demos/todo/"></iframe>
 				</section>
 
 				<section>
-					<h2>Tool we will use</h2>
+					<h3>Tool we will use</h3>
 					<p>Monaca</p>
+					<p><img src="img/monaca.png" alt=""></p>
 				</section>
 
 				<section>
 					<h2>Let's start with this Template</h2>
-					<p>https://</p>
+					<p>https://github.com/kruyvanna/todo</p>
 				</section>
 
 				
@@ -286,12 +314,49 @@ function Controller2( $scope ){
 				</section> -->
 
 				<section>
+					<h2>The complete source code</h2>
+					<p>
+						<a href="https://github.com/kruyvanna/Todo_Complete" title="">https://github.com/kruyvanna/Todo_Complete</a>
+					</p>
+					
+				</section>
+
+				<section>
+					<h3>Other factors to make your App successful</h3>
+					<ul>
+						<li>fastclick</li>
+						<li>-webkit-tap-highlight-color: rgba(0,0,0,0);</li>
+						<li>-webkit-user-select: none;</li>
+						<li>-webkit-overflow-scrolling: touch;</li>
+						<li>Page management</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Onsen UI</h2>
+					<img src="img/onsenui.png" alt="">
+					<div>
+						<a href="https://github.com/OnsenUI/OnsenUI" title="">https://github.com/OnsenUI/OnsenUI</a>	
+					</div>
+					<div>
+						<a href="http://docs.monaca.mobi/onsen/" title="">http://docs.monaca.mobi/onsen/</a>
+					</div>
+					
+				</section>
+
+				<section>
 					<h2>Wrapup</h2>
+					<ul>
+						<li>PhoneGap</li>
+						<li>AngularJS</li>
+						<li>Topcoat</li>
+					</ul>
 				</section>				
 				
 
 				<section>
 					<h1>THE END</h1>
+					<img src="img/yes.jpg" alt="">
 				</section>
 
 			</div>
